@@ -5,7 +5,7 @@ const fs = require('fs');
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 router.get("/", function (req, res) {
-  res.send("<form action='/upload' method='post' enctype='multipart/form-data'><input type='text' name='username' placeholder='Username'><input type='file' name='file'><input type='submit' value='Upload'>")
+  res.render("upload")
 })
 
 router.post("/", urlencodedParser, function (req, res) {

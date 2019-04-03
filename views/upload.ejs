@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GIA - Arduino | Uploads</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="/js/upload.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>Upload</h1>
+    <form action='/upload' method='post' enctype='multipart/form-data'>
+      <input type='text' name='username' placeholder='Username' id="usernameInput" onload="javascript:getUsername()">
+      <input type='file' name='file'>
+      <input type='submit' value='Upload' onclick="saveUsername()">
+    </form>
+  </body>
+</html>
