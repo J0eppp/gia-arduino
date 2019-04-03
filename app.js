@@ -9,9 +9,12 @@ const server = app.listen(80, function () {
 
 app.set("view engine", "ejs")
 
+app.use("/js/", express.static("public/js/"));
+app.use("/css/", express.static("public/css/"));
+
 app.use(fileUpload({
   useTempFiles: true,
   tempFileDir: "/tmp/"
-}))
+}));
 
 app.use(router);
