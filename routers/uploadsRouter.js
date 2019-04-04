@@ -22,7 +22,6 @@ router.get("/:folderName/:fileName/code", function (req, res) {
   var fileName = req.params.fileName;
   if (fs.existsSync("./uploads/" + folderName + "/" + fileName)) {
     var file = fs.readFileSync("./uploads/" + folderName + "/" + fileName);
-    console.log(file.toString());
     res.render("showFile", {
       file: file
     });
@@ -39,9 +38,5 @@ router.get("/:folderName?", function (req, res) {
     res.render("uploads-master");
   }
 });
-
-// router.get("/getFolder/:folderName", function (req, res) {
-//
-// });
 
 module.exports = router;
